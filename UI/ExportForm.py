@@ -3,7 +3,6 @@ from Controllers.CustomerController import *
 from Controllers.AppointmentController import *
 from Helpers.CalendarFormatter import *
 from Validators.ValidateExport import *
-from Helpers.ImageHandler import ImageHandler
 
 
 class ExportForm(tk.Frame):
@@ -35,7 +34,7 @@ class ExportForm(tk.Frame):
                                    bg='#C0C0C0').grid(row=3, column=0, padx=5)
 
         tk.Button(self, text="<<Επιστροφή στο Αρχικό Μενού", font=("Lucida", "10", "bold"), fg='white', bg='#335BA3',
-                  command=lambda: (controller.show_frame("Menu"),ImageHandler.open_image(), self.date.selection_set(datetime.today()))).grid(
+                  command=lambda: (controller.show_frame("Menu"), self.date.selection_set(datetime.today()))).grid(
             row=1, column=1,
             padx=(10, 0), pady=(0, 10))
         self.label_comment = tk.Label(self, text="""Επιλέγοντας την ημέρα στο ημερολόγιο, μπορείτε να εξάγετε

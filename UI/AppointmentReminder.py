@@ -2,7 +2,6 @@ import tkinter as tk
 from Controllers.AppointmentController import *
 from Helpers.CalendarFormatter import *
 import Helpers.EmailNotifications as EmailNotifications
-from Helpers.ImageHandler import ImageHandler
 
 
 class AppointmentReminder(tk.Frame):
@@ -33,7 +32,7 @@ class AppointmentReminder(tk.Frame):
                                    bg='#C0C0C0').grid(row=3, column=0, pady=10)
 
         tk.Button(self, text="<<Επιστροφή στο Αρχικό Μενού", font=("Lucida", "10", "bold"),
-            fg='white', bg='#335BA3',command=lambda: (controller.show_frame("Menu"),ImageHandler.open_image(),
+            fg='white', bg='#335BA3',command=lambda: (controller.show_frame("Menu"),
                                     self._delete_entry())).grid(row=1, column=1, pady=10)
         self.label_comment = tk.Label(self, text="""Επιλέγοντας την ημέρα στο ημερολόγιο, θα σταλεί αυτόματη ειδοποίηση
         υπενθύμισης σε όλους τους πελάτες που έχουν ραντεβού την ημέρα εκείνη""",

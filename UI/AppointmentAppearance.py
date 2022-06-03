@@ -1,7 +1,6 @@
 from UI.UpdateAppointmentForm import *
 from UI.UpdateCustomerForm import *
 from Helpers.TimeFormatter import *
-from Helpers.ImageHandler import ImageHandler
 
 
 class AppointmentAppearance(tk.Frame):
@@ -21,7 +20,7 @@ class AppointmentAppearance(tk.Frame):
 
         self.menu = tk.Button(self, text="<<Επιστροφή στο Αρχικό Μενού", font=("Lucida", "10", "bold"),
                               fg='white', bg='#335BA3', command=lambda: (
-                                  controller.show_frame("Menu"), self.clean_records(),ImageHandler.open_image(), self.clear_spinbox(),
+                                  controller.show_frame("Menu"), self.clean_records(), self.clear_spinbox(),
                                   self.date.selection_set(datetime.today())))
         self.menu.grid(row=2, column=1, pady=5)
 

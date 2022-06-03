@@ -2,7 +2,6 @@ import tkinter
 
 from Controllers.CustomerController import *
 from UI.UpdateCustomerForm import *
-from Helpers.ImageHandler import ImageHandler
 
 
 class CustomerDisplay(tk.Frame):
@@ -46,7 +45,7 @@ class CustomerDisplay(tk.Frame):
 
         self.menu = tk.Button(self, text="<<Επιστροφή στο Αρχικό Μενού", font=("Lucida", "10", "bold"), fg='white',
                               bg='#335BA3',
-                              command=lambda: (controller.show_frame("Menu"),ImageHandler.open_image(), self.clean_records()))
+                              command=lambda: (controller.show_frame("Menu"), self.clean_records()))
         self.menu.grid(row=2, column=3)
         tk.Button(self, text="Εμφάνιση Αποτελεσμάτων", font=("Lucida", "10", "bold"), fg='#335BA3', bg='#DAE3F3',
                   command=lambda: (self.display())).grid(row=5, column=3, pady=20)

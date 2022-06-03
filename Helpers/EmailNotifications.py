@@ -18,7 +18,7 @@ class EmailNotifications:
 
         for appointment in appointments:
             msg = MIMEMultipart()
-            msg['From'] = 'appointmentmanagerproject@gmail.com'
+            msg['From'] = 'apointmentmanager@yahoo.com'
             msg['To'] = appointment[10]
             msg['Subject'] = subject
 
@@ -29,11 +29,11 @@ class EmailNotifications:
             html_content = MIMEText(html_format, 'html')
             msg.attach(html_content)
 
-            with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+            with smtplib.SMTP('smtp.mail.yahoo.com', 587) as smtp:
                 smtp.ehlo()
                 smtp.starttls()
 
-                smtp.login('appointmentmanagerproject@gmail.com', 'Panagiotis123')
+                smtp.login('apointmentmanager@yahoo.com', 'mihnphgrfwzbebby')
 
                 smtp.send_message(msg)
                 smtp.quit()

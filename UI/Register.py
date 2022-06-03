@@ -4,7 +4,6 @@ from Controllers.AppointmentController import *
 from Helpers.CalendarFormatter import *
 from Validators.ValidateRegisterForm import *
 from datetime import datetime
-from Helpers.ImageHandler import ImageHandler
 
 
 class Register(tk.Frame):
@@ -93,7 +92,7 @@ class Register(tk.Frame):
 
         tk.Button(self, text="<<Επιστροφή στο Αρχικό Μενού", font=("Lucida", "10",
                                                                    "bold"), fg='white', bg='#335BA3',
-                  command=lambda: (controller.show_frame("Menu"), self._delete_entry(),ImageHandler.open_image())).grid(row=1, column=1)
+                  command=lambda: (controller.show_frame("Menu"), self._delete_entry())).grid(row=1, column=1)
         self.submit_button = tk.Button(self, text="Αποθήκευση", state='normal', font=("Lucida", "10",
                                         "bold"), fg='#335BA3', bg='#DAE3F3', command=lambda: (self.submit()))
         self.submit_button.grid(row=10, column=1, pady=(10, 10))
