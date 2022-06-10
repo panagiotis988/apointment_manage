@@ -4,7 +4,6 @@ from Controllers.AppointmentController import *
 from Helpers.CalendarFormatter import *
 from Validators.ValidateExport import *
 
-
 class ExportForm(tk.Frame):
 
     def __init__(self, parent, controller):

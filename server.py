@@ -18,7 +18,7 @@ class server(tk.Tk):
 
         sql_table(conDatabase)
 
-        # self.attributes("-fullscreen", True)
+        self.attributes("-fullscreen", True)
         self.bind("<F11>", lambda event: self.attributes("-fullscreen",
                                                          not self.attributes("-fullscreen")))
         self.bind("<Escape>", lambda event: self.attributes("-fullscreen", False))

@@ -2,7 +2,6 @@ from UI.UpdateAppointmentForm import *
 from UI.UpdateCustomerForm import *
 from Helpers.TimeFormatter import *
 
-
 class AppointmentAppearance(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)

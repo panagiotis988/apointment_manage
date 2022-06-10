@@ -3,7 +3,6 @@ from Controllers.AppointmentController import *
 from Helpers.CalendarFormatter import *
 import Helpers.EmailNotifications as EmailNotifications
 
-
 class AppointmentReminder(tk.Frame):
 
     def __init__(self, parent, controller):

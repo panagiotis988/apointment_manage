@@ -18,7 +18,8 @@ class UpdateCustomerForm:
                               fg='#335BA3', bg='white').grid(row=0, column=1, columnspan=3, pady=10)
         self.label_comment = tk.Label(top, text="Αφού πραγματοποιήσετε τις αλλαγές στα πεδία πατήστε 'Αποθήκευση'",
                                       font=("Lucida", "10", "italic"), fg='#335BA3', bg='white').grid(row=2,
-                                                                                            column=1, columnspan=3,
+                                                                                                      column=1,
+                                                                                                      columnspan=3,
                                                                                                       pady=10)
 
         self.fname = tk.Entry(top, width=15)
@@ -49,15 +50,20 @@ class UpdateCustomerForm:
                           invalidcommand=(top.register(self.on_invalid), 'email'))
 
         self.fname_label = tk.Label(top, text="Όνομα", highlightbackground='white',
-                font=("Lucida", "12", "bold"), fg='#335BA3', bg='white').grid(row=3, column=0, sticky="w", padx=3)
+                                    font=("Lucida", "12", "bold"), fg='#335BA3', bg='white').grid(row=3, column=0,
+                                                                                                  sticky="w", padx=3)
         self.lastName_label = tk.Label(top, text="Επώνυμο", highlightbackground='white',
-                font=("Lucida", "12", "bold"), fg='#335BA3', bg='white').grid(row=3, column=1, sticky="w", padx=3)
+                                       font=("Lucida", "12", "bold"), fg='#335BA3', bg='white').grid(row=3, column=1,
+                                                                                                     sticky="w", padx=3)
         self.mobile_label = tk.Label(top, text="Κινητό", highlightbackground='white',
-                font=("Lucida", "12", "bold"), fg='#335BA3', bg='white').grid(row=3, column=2, sticky="w", padx=3)
+                                     font=("Lucida", "12", "bold"), fg='#335BA3', bg='white').grid(row=3, column=2,
+                                                                                                   sticky="w", padx=3)
         self.city_label = tk.Label(top, text="Πόλη", highlightbackground='white',
-                font=("Lucida", "12", "bold"), fg='#335BA3', bg='white').grid(row=3, column=3, sticky="w", padx=3)
+                                   font=("Lucida", "12", "bold"), fg='#335BA3', bg='white').grid(row=3, column=3,
+                                                                                                 sticky="w", padx=3)
         self.email_label = tk.Label(top, text="e-mail", highlightbackground='white',
-                font=("Lucida", "12", "bold"), fg='#335BA3', bg='white').grid(row=3, column=4, sticky="w", padx=3)
+                                    font=("Lucida", "12", "bold"), fg='#335BA3', bg='white').grid(row=3, column=4,
+                                                                                                  sticky="w", padx=3)
 
         self.label_error = tk.Label(top, foreground='red', bg="white")
         self.success = tk.Label(top, foreground='green', bg="white")
@@ -65,7 +71,8 @@ class UpdateCustomerForm:
         self.success.grid(row=11, column=1, sticky=tk.W, padx=5)
 
         self.update_button = tk.Button(top, state='normal', text="Αποθήκευση", font=("Lucida", "10",
-                                        "bold"), fg='#335BA3', bg='#DAE3F3',
+                                                                                     "bold"), fg='#335BA3',
+                                       bg='#DAE3F3',
                                        command=lambda: (self.update_customer(customerId)))
         self.update_button.grid(row=10, column=2, pady=20)
 

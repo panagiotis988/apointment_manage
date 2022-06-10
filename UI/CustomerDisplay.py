@@ -1,6 +1,3 @@
-import tkinter
-
-from Controllers.CustomerController import *
 from UI.UpdateCustomerForm import *
 
 

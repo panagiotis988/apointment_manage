@@ -1,5 +1,4 @@
 import tkinter as tk
-from Models.AppointmentModel import *
 from Helpers.CalendarFormatter import *
 from Controllers.AppointmentController import *
 from Controllers.CustomerController import *
@@ -19,7 +18,7 @@ class UpdateAppointmentUpForm:
         self.title = tk.Label(top, text="Τροποποίηση του Ραντεβού", font=("Lucida", "16", "bold"),
                               fg='#335BA3', bg='white').grid(row=0, column=1, columnspan=3, pady=10)
         self.label_comment = tk.Label(top, text="Αφού πραγματοποιήσετε τις αλλαγές πατήστε 'Τροποποίηση'",
-                                      font=("Lucida", "10", "italic"), fg='#335BA3', bg='white').grid(row=2,column=1,
+                                      font=("Lucida", "10", "italic"), fg='#335BA3', bg='white').grid(row=2, column=1,
                                                                                                       pady=10)
 
         start_time_format = datetime.strptime(start_time, format)
@@ -52,7 +51,6 @@ class UpdateAppointmentUpForm:
         tk.Label(top, text="Ώρα έναρξης", font=("Lucida", "11", "bold"), fg='#335BA3',
                  bg='white').grid(row=9, column=0, pady=10)
 
-
         self.duration = tk.OptionMenu(top, self.duration_time_init, *self.duration_time)
         self.duration.config(font=("Lucida", "10", "bold"), fg='white', bg='#335BA3', width=20)
         self.duration.grid(row=8, column=1)
@@ -65,7 +63,7 @@ class UpdateAppointmentUpForm:
         self.start_time.bind('<Button-1>', self._callback)
 
         tk.Button(top, text="Τροποποίηση", font=("Lucida", "10", "bold"), fg='#335BA3', bg='#DAE3F3',
-                   command=lambda: (self.validate_dropdown(appointmentId))).grid(row=10, column=1)
+                  command=lambda: (self.validate_dropdown(appointmentId))).grid(row=10, column=1)
         self.success = tk.Label(top, foreground='green', bg='white')
         self.success.grid(row=11, column=1)
 

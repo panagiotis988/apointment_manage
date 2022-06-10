@@ -94,7 +94,8 @@ class Register(tk.Frame):
                                                                    "bold"), fg='white', bg='#335BA3',
                   command=lambda: (controller.show_frame("Menu"), self._delete_entry())).grid(row=1, column=1)
         self.submit_button = tk.Button(self, text="Αποθήκευση", state='normal', font=("Lucida", "10",
-                                        "bold"), fg='#335BA3', bg='#DAE3F3', command=lambda: (self.submit()))
+                                                                                      "bold"), fg='#335BA3',
+                                       bg='#DAE3F3', command=lambda: (self.submit()))
         self.submit_button.grid(row=10, column=1, pady=(10, 10))
 
         self.label_error = tk.Label(self, foreground='red')
